@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+     color: white;
+}
+
+body{
+    background-image: url(kepek/hatter2.png);
+    margin: auto;
+    border: 1px solid white;
+    margin: 5px;
+    text-align: justify;
+}
+
+header h1{
+    color: rgb(5, 129, 129);
+}
+
+
+header, nav, aside, article, footer{
+    border: 1px solid white;
+    padding: 10px;
+}
+
+nav ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgb(5, 129, 129);
+}
+
+nav ul li{
+    margin: 5px;
+    text-align: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+section{
+    border: 1px solid white;
+}
+
+
+.kepsor img{
+    max-width: 300px;
+    padding: 5px;
+    border: 1px solid white;
+    width: 100%;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "h h h"
+                         "n n n"
+                         "b a j"
+                         "f f f";
+    gap: 10px;
+}
+
+header{
+    grid-area: h;
+    font-weight: bold;
+    text-align: justify;
+}
+
+nav{
+    grid-area: n;
+    padding-right: 200px;
+}
+
+.bal{
+    grid-area: b;
+}
+
+.jobb{
+    grid-area: j;
+}
+
+.jobb p{
+    padding-bottom: 15px;
+}
+
+article{
+    grid-area: a;
+}
+
+footer{
+    grid-area: f;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        width: 100%;
+        font-size: 3vw;
+      }
+      main{
+          grid-template-columns: 3fr 1fr;
+          grid-template-areas: "h h"
+                               "n n"
+                               "a b"
+                               "j j"
+                               "f f";
+      }
+      section{
+        grid-template-columns: 1fr 1fr;
+    }
+    nav{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+      width: 100%;
+      font-size: 5vw;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "a"
+                             "j" 
+                             "b"
+                             "f";
+    }
+    nav ul{
+        grid-template-columns: 1fr;
+    }
+    section{
+        grid-template-columns: 1fr;
+    }
+  }
